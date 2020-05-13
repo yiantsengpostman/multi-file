@@ -476,7 +476,7 @@ paths:
           description: Invalid username supplied
         '404':
           description: User not found
-  /login:
+  /admin/login:
     get:
       summary: Logs user into the system
       description: ''
@@ -527,7 +527,7 @@ paths:
                   value:  OK
         '400':
           description: Invalid username/password supplied
-  /logout:
+  /admin/logout:
     get:
       summary: Logs out current logged in user session
       description: ''
