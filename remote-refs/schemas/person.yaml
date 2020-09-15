@@ -6,4 +6,4 @@ properties:
   name:
     type: string
   home:
-    "$ref": "#/definitions/Address"
+    "$ref": "address.yaml"

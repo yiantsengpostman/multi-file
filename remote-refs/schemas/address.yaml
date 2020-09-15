@@ -6,4 +6,4 @@ properties:
   city:
     type: string
   occupant:
-    "$ref": "#/definitions/Person"
+    "$ref": "person.yaml"
