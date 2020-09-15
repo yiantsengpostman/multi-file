@@ -1,0 +1,9 @@
+type: object
+required:
+- name
+- home
+properties:
+  name:
+    type: string
+  home:
+    "$ref": "#/definitions/Address"
