@@ -20,3 +20,15 @@ paths:
             application/json:    
               schema:
                 $ref: "schemas/person.yaml"
+    post:
+      summary: List all pets
+      operationId: listPets
+      tags:
+        - pets
+      responses:
+        '200':
+          description: An paged array of pets
+          content:
+            application/json:    
+              schema:
+                $ref: "https://raw.githubusercontent.com/VShingala/api-schema/master/pet.yaml"
