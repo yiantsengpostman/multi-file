@@ -51,4 +51,4 @@ paths:
           content:
             application/json:    
               schema:
-                $ref: "pet.yaml"
+                $ref: "incorrect-ref.yaml"
