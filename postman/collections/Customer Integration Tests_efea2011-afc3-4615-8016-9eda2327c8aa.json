@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "b3000e9c-4f66-4796-a1b7-66105e470192",
+		"_postman_id": "dce7c3f3-f9c1-4d2a-b8f9-217e79cf34c0",
 		"name": "Customer Integration Tests",
 		"description": "API for creating and managing banking customers.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23356656-dce7c3f3-f9c1-4d2a-b8f9-217e79cf34c0"
 	},
 	"item": [
 		{
@@ -11,7 +12,7 @@
 			"item": [
 				{
 					"name": "Get all users",
-					"id": "2b9d3e31-8a71-4f73-8139-bc363268c6e6",
+					"id": "90b708d7-f222-4231-afe4-6024fab7e7fb",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -39,7 +40,7 @@
 					},
 					"response": [
 						{
-							"id": "a033b8f2-9a90-48e1-86be-7b904abfe35d",
+							"id": "e962547f-364d-48c6-aa19-4105ccf42eb1",
 							"name": "200 OK",
 							"originalRequest": {
 								"method": "GET",
@@ -63,6 +64,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"disabled": false,
@@ -107,7 +109,7 @@
 				},
 				{
 					"name": "Get users by last name",
-					"id": "3abf19ab-af24-4a85-928d-4e4a80a34d14",
+					"id": "92d1b497-bbce-45f9-89d0-b41a729bca0a",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -137,7 +139,7 @@
 					},
 					"response": [
 						{
-							"id": "42def1de-70da-4c62-8cdf-dd0840c1030c",
+							"id": "2cef4deb-a055-4623-884a-2d192cead362",
 							"name": "200",
 							"originalRequest": {
 								"method": "GET",
@@ -162,6 +164,7 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
 							"header": [
 								{
 									"disabled": false,
@@ -205,11 +208,11 @@
 					]
 				}
 			],
-			"id": "6820820c-9f67-4398-951f-9b7e5d88d977"
+			"id": "728d6882-8d26-4b94-bf31-8688b1ace2c4"
 		},
 		{
 			"name": "New user",
-			"id": "9fd0b364-93f2-4979-a501-3867af90ae68",
+			"id": "0d209bc0-08c2-4025-a8e8-b07fab41de8b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -242,7 +245,7 @@
 			},
 			"response": [
 				{
-					"id": "b2e626b4-61db-483d-8275-8aaff0ed7b6b",
+					"id": "8c34db06-c2ed-4fbd-9e84-0c15f455191c",
 					"name": "New user",
 					"originalRequest": {
 						"method": "POST",
@@ -264,6 +267,7 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "html",
 					"header": [
 						{
 							"disabled": false,
@@ -308,7 +312,7 @@
 		},
 		{
 			"name": "Delete user",
-			"id": "4ac132e8-5c7b-4455-92b2-696bc77633df",
+			"id": "374ae6d6-ab3b-4228-8e3d-2be4251975da",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -348,7 +352,7 @@
 			},
 			"response": [
 				{
-					"id": "c835150d-662d-417e-9c37-393ec26a59d9",
+					"id": "17db439a-0099-42ae-a96a-f2035273ca18",
 					"name": "Delete user",
 					"originalRequest": {
 						"method": "DELETE",
@@ -376,6 +380,7 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "html",
 					"header": [
 						{
 							"disabled": false,
@@ -420,7 +425,7 @@
 		},
 		{
 			"name": "Update user",
-			"id": "6685008c-272f-4c0c-9eae-2fde200361a1",
+			"id": "7a1af1c9-6ea5-4949-81c6-ca7e7c6ddf03",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -460,7 +465,7 @@
 			},
 			"response": [
 				{
-					"id": "1e6f106b-99c0-495c-927b-4284c328725c",
+					"id": "e3d5823b-a916-4772-b40d-cd4a6650de94",
 					"name": "Update user",
 					"originalRequest": {
 						"method": "PUT",
@@ -488,6 +493,7 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "html",
 					"header": [
 						{
 							"disabled": false,

@@ -1,17 +1,21 @@
 {
 	"info": {
-		"_postman_id": "2b8bfb24-94a8-48ca-96be-63ebb6f0878c",
-		"name": "Dataverify Tests",
-		"description": "API for creating and managing banking customers.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "513800d3-143e-492e-9764-8ffeaa3a6bef",
+		"name": "Patient Lookup",
+		"description": "API for creating and managing patient information.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "23356656-513800d3-143e-492e-9764-8ffeaa3a6bef"
 	},
 	"item": [
 		{
 			"name": "get",
 			"item": [
 				{
-					"name": "Get all users",
-					"id": "7414dd15-b29f-4041-8c3f-e3bc59cc7107",
+					"name": "Get all patient files",
+					"id": "33e5d990-b4c4-4c3e-bbae-4acb86661793",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [
@@ -21,7 +25,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/get?all=true",
+							"raw": "{{baseUrl}}/get?all=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -31,21 +35,26 @@
 							"query": [
 								{
 									"key": "all",
-									"value": "true"
+									"value": "<string>"
 								}
 							]
 						},
-						"description": "Get all users in the system."
+						"description": "Get all patient files in the system."
 					},
 					"response": [
 						{
-							"id": "c3196f9c-38e7-44ae-9819-ad831d81e59b",
+							"id": "24c5a3b2-d95a-43d1-bf05-778ac51cac68",
 							"name": "200 OK",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
 								"url": {
-									"raw": "{{baseUrl}}/get?all=true",
+									"raw": "{{baseUrl}}/get?all=<string>",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -55,10 +64,11 @@
 									"query": [
 										{
 											"key": "all",
-											"value": "true"
+											"value": "<string>"
 										}
 									]
-								}
+								},
+								"description": "Get all patient files in the system."
 							},
 							"status": "OK",
 							"code": 200,
@@ -100,14 +110,16 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "[\n  {\n    \"status\": \"success\"\n  },\n  {\n    \"firstName\": \"Ben\",\n    \"id\": \"0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7\",\n    \"lastName\": \"Smith\"\n  }\n]"
 						}
 					]
 				},
 				{
-					"name": "Get users by last name",
-					"id": "34e8a611-727d-4341-8ad7-35770aed1f3d",
+					"name": "Get patient files by last name",
+					"id": "7d4f3a58-a7e5-45c9-84f3-e96edbe862e7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [
@@ -117,7 +129,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/get/?firstName={{$randomLastName}}",
+							"raw": "{{baseUrl}}/get/?firstName=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -128,22 +140,27 @@
 							"query": [
 								{
 									"key": "firstName",
-									"value": "{{$randomLastName}}",
-									"description": "The user's first name (required)"
+									"value": "<string>",
+									"description": "The patient file's first name (required)"
 								}
 							]
 						},
-						"description": "Retrieves all users with the given `firstName`."
+						"description": "Retrieves all patient files with the given `firstName`."
 					},
 					"response": [
 						{
-							"id": "f773379f-14b5-44d9-ba93-0e00b0c43d9b",
+							"id": "bc7f4d88-231d-4b7e-8ad6-5b700fa7fb00",
 							"name": "200",
 							"originalRequest": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
 								"url": {
-									"raw": "{{baseUrl}}/get/?firstName={{$randomLastName}}",
+									"raw": "{{baseUrl}}/get/?firstName=<string>",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -154,10 +171,12 @@
 									"query": [
 										{
 											"key": "firstName",
-											"value": "{{$randomLastName}}"
+											"value": "<string>",
+											"description": "The patient file's first name (required)"
 										}
 									]
-								}
+								},
+								"description": "Retrieves all patient files with the given `firstName`."
 							},
 							"status": "OK",
 							"code": 200,
@@ -199,17 +218,16 @@
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "[\n  {\n    \"status\": \"success\"\n  },\n  {\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"id\": \"0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7\",\n    \"lastName\": \"{{$randomLastName}}\"\n  }\n]"
 						}
 					]
 				}
 			],
-			"id": "f198e9bd-fe39-485f-a7ff-f12072af87f5"
+			"id": "dde4cec7-17e8-4ef3-b737-508e9fbcf3de"
 		},
 		{
-			"name": "New user",
-			"id": "a760f0b9-ed51-4512-9fe3-13e6c5fbc7d7",
+			"name": "New patient file",
+			"id": "9bb97ca1-1f74-475a-acc0-987cfb887256",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -227,39 +245,61 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"firstName\": \"{{$randomFirstName}}\",\n  \"lastName\": \"{{$randomLastName}}\"\n}"
+					"raw": "[object Object]"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/create",
+					"raw": "{{baseUrl}}/create?",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"path": [
 						"create"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
 					]
 				},
-				"description": "Creates a new user in the system. The user will be assigned an ID automatically. This can be found in the response."
+				"description": "Creates a new patient file in the system. The patient file will be assigned an ID automatically. This can be found in the response."
 			},
 			"response": [
 				{
-					"id": "20a710b9-3285-48e8-a19a-7865e0a85e1f",
-					"name": "New user",
+					"id": "0cf06c2e-7a33-4015-b85c-34e4fd3baf0b",
+					"name": "New patient file",
 					"originalRequest": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"firstName\": \"{{$randomFirstName}}\",\n  \"lastName\": \"{{$randomLastName}}\"\n}"
+							"raw": "[object Object]"
 						},
 						"url": {
-							"raw": "{{baseUrl}}/create",
+							"raw": "{{baseUrl}}/create?",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"create"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
 							]
-						}
+						},
+						"description": "Creates a new patient file in the system. The patient file will be assigned an ID automatically. This can be found in the response."
 					},
 					"status": "OK",
 					"code": 200,
@@ -301,14 +341,13 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"firstName\": \"Ben\",\n  \"id\": \"0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7\",\n  \"lastName\": \"Smith\",\n  \"status\": \"success\"\n}"
 				}
 			]
 		},
 		{
-			"name": "Delete user",
-			"id": "fd2d94f5-9a37-4ca2-a182-eca7a12977fe",
+			"name": "Delete patient file",
+			"id": "6587f450-7ca5-415e-9462-57babff95070",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -326,10 +365,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "\"\""
+					"raw": ""
 				},
 				"url": {
-					"raw": "{{baseUrl}}/delete?id={{id}}",
+					"raw": "{{baseUrl}}/delete?id=<string>",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -339,26 +378,35 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "{{id}}",
-							"description": "The user's ID"
+							"value": "<string>",
+							"description": "The patient file's ID"
 						}
 					]
 				},
-				"description": "Deletes a user from the system by `id`."
+				"description": "Deletes a patient file from the system by `id`."
 			},
 			"response": [
 				{
-					"id": "6eba2b33-a757-4666-a58a-72b397c745e9",
-					"name": "Delete user",
+					"id": "463d93ec-eb5f-4f60-8f99-6a1de335d36b",
+					"name": "Delete patient file",
 					"originalRequest": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "\"\""
+							"raw": ""
 						},
 						"url": {
-							"raw": "{{baseUrl}}/delete?id={{id}}",
+							"raw": "{{baseUrl}}/delete?id=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -368,10 +416,12 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "{{id}}"
+									"value": "<string>",
+									"description": "The patient file's ID"
 								}
 							]
-						}
+						},
+						"description": "Deletes a patient file from the system by `id`."
 					},
 					"status": "OK",
 					"code": 200,
@@ -413,14 +463,13 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"id\": \"0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7\",\n  \"status\": \"success\"\n}"
 				}
 			]
 		},
 		{
-			"name": "Update user",
-			"id": "7541ad31-1b83-48df-babb-1675e81ee754",
+			"name": "Update patient file",
+			"id": "682ec66d-8308-46e9-b280-40d74b18ea7e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -438,10 +487,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"firstName\": \"Benjamin\",\n  \"password\": \"foobar\"\n}"
+					"raw": "[object Object]"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/update?id={{id}}",
+					"raw": "{{baseUrl}}/update?id=<string>",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -451,8 +500,8 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "{{id}}",
-							"description": "The user's ID (required)"
+							"value": "<string>",
+							"description": "The patient file's ID (required)"
 						}
 					]
 				},
@@ -460,17 +509,26 @@
 			},
 			"response": [
 				{
-					"id": "5c7e6371-83f8-4022-8231-f2636134bb44",
-					"name": "Update user",
+					"id": "693b3ae7-4ed2-47c7-b872-04d274529d16",
+					"name": "Update patient file",
 					"originalRequest": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"firstName\": \"Benjamin\",\n  \"password\": \"foobar\"\n}"
+							"raw": "[object Object]"
 						},
 						"url": {
-							"raw": "{{baseUrl}}/update?id={{id}}",
+							"raw": "{{baseUrl}}/update?id=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -480,10 +538,12 @@
 							"query": [
 								{
 									"key": "id",
-									"value": "{{id}}"
+									"value": "<string>",
+									"description": "The patient file's ID (required)"
 								}
 							]
-						}
+						},
+						"description": "Send the keys that you'd like to update, this can be one or more of `firstName`, `lastName` and `password`."
 					},
 					"status": "OK",
 					"code": 200,
@@ -525,7 +585,6 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"firstName\": \"Benjamin\",\n  \"id\": \"0729d37c-ef9f-4ffa-8f71-a6eedf1f95b7\",\n  \"lastName\": \"Smith\",\n  \"status\": \"success\"\n}"
 				}
 			]
@@ -533,9 +592,9 @@
 	],
 	"variable": [
 		{
-			"id": "8f9187e0-911b-431d-a181-383498524d68",
+			"id": "cf2b5d2e-dd4d-4ad2-a470-d031d8270563",
 			"key": "baseUrl",
-			"value": "https://3f9ab1dc-fede-484c-b519-0cc8b90c827a.mock.pstmn.io",
+			"value": "https://03d3ab1c-b3ee-4518-bea3-128334115aab.mock.pstmn.io",
 			"type": "string"
 		}
 	]
